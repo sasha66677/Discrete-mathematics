@@ -47,3 +47,7 @@ Example
 6 4 -> 15
 7 2 -> 21
 8 0 -> 1
+
+
+task 4    Ones (part 2)
+the same, but 0<=K<=N<=1e6
