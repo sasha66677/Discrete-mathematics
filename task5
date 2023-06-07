@@ -1,0 +1,56 @@
+/// c++
+
+#include <fstream>
+
+uint64_t countWays(int n, int m) {
+    constexpr auto mod = 1000000007;
+
+    int size = std::max(n, m);
+
+    constexpr short num_rows= 2;
+    uint64_t** x = new uint64_t *[num_rows];
+    for (short i = 0; i < num_rows; ++i) {
+        x[i] = new uint64_t[size];
+        for (int j = 0; j < size; ++j)
+            x[i][j] = 0;
+    }
+
+    x[1][0] = 1;
+    for (short i = 1; i < size; ++i) {
+        std::swap(x[0], x[1]);
+
+        x[1][0] = 1;
+        for (short j = 1; j < i; j++) {
+            x[1][j] = x[0][j] + x[1][j - 1];
+            x[1][j] %= mod;
+        }
+        x[1][i] = 2 * x[1][i - 1];
+        x[1][i] %= mod;
+
+    }
+
+    uint64_t result = x[1][std::min(n, m) - 1];
+
+    for (short i = 0; i < num_rows; ++i) {
+        delete[] x[i];
+    }
+    delete[] x;
+
+    return result;
+}
+
+int main() {
+    std::ifstream inputFile("input.txt");
+    int n, m;
+    inputFile >> n >> m;
+
+    inputFile.close();
+
+    uint64_t result = countWays(n, m);
+
+    std::ofstream outputFile("output.txt");
+    outputFile << result;
+    outputFile.close();
+
+    return 0;
+}

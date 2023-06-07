@@ -12,6 +12,7 @@ example
 3 1 -> 123
 
 
+
 task 2    Decryption methods
 Alice has a cipher - a string S consisting of numbers, which can be decrypted using the following transformation:
 A - 1
@@ -33,6 +34,7 @@ Example
 Note In the first example, "13" can be decoded as "AC" (1, 3) or as "M" (13). In the second example, "113" can be decoded as "AAC" (1, 1, 3), as "KC" (11, 3) or as "AM" (1, 13). In the third example, "01" cannot be decoded so that the resulting string contains only uppercase Latin letters.
 
 
+
 task 3    Ones (part 1)
 The number N is given. It is necessary to determine how many binary strings of length N are, in which exactly K ones are.
 Input data format
@@ -49,5 +51,18 @@ Example
 8 0 -> 1
 
 
+
 task 4    Ones (part 2)
 the same, but 0<=K<=N<=1e6
+
+
+
+task 5    Turtle
+The turtle walks on a rectangular field. Now she is in the lower left corner, but she wants to get into the upper right corner. The turtle is very inquisitive, but weak in the exact sciences, so it asks you to count how many ways there are to get to the corner it so desired if it can only move up and to the right.
+Input data format
+The input contains the numbers n rows and m columns in the field, separated by a space (1<=n,m<=10000).
+Output format
+Print the number of ways to get from the square with coordinates (1,1) to the square with coordinates (n,m) modulo 1000000007.
+
+Example
+2 2 -> 2
