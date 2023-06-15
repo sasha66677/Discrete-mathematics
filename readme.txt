@@ -57,7 +57,7 @@ the same, but 0<=K<=N<=1e6
 
 
 
-task 5    Turtle
+task 5    Turtle (part 1)
 The turtle walks on a rectangular field. Now she is in the lower left corner, but she wants to get into the upper right corner. The turtle is very inquisitive, but weak in the exact sciences, so it asks you to count how many ways there are to get to the corner it so desired if it can only move up and to the right.
 Input data format
 The input contains the numbers n rows and m columns in the field, separated by a space (1<=n,m<=10000).
@@ -66,3 +66,10 @@ Print the number of ways to get from the square with coordinates (1,1) to the sq
 
 Example
 2 2 -> 2
+
+task 6    Turtle (part 2)
+the same, but the turtle can move up, to the right and diagonally up-right.
+
+Example
+2 2 -> 3
+3 2 -> 5
